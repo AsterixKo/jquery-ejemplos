@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .btnClick {
+            background-color: red;
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+
+    <button class="btnClick">Click me!</button>
+
+    <!-- https://developers.google.com/speed/libraries/#jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        $('.btnClick').css('font-size', '20px');
+
+        //Specify a function to execute when the DOM is fully loaded.
+        $(document).ready(function () {
+            console.log('Ready');
+        });
+
+        //JQuery
+        $('.btnClick').click(function () {
+            console.log('clicked element');
+        });
+    </script>
+</body>
+
+</html>
