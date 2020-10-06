@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Hola, esta es la práctica de jQuery</h1>
+    <span>Hola mundo este es el elemento que quiero capturar mediante selector simple
+        (por nombre del elemento)
+    </span>
+    <div class="contenedor-principal">
+        <p class="parrafo1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, consequuntur. Enim neque possimus magnam
+            officia, dolor maiores illo tempore esse nemo minima, dolore illum voluptate! Impedit in recusandae
+            temporibus, tempora praesentium alias velit unde! Perspiciatis voluptates nam ad, ipsum assumenda, aliquid
+            eum nesciunt architecto quae non est hic, voluptate in aspernatur perferendis. Commodi repudiandae ipsa
+        </p>
+    </div>
+    <div class="contenedor-principal">
+        <p class="parrafo2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, consequuntur. Enim neque possimus magnam
+            officia, dolor maiores illo tempore esse nemo minima, dolore illum voluptate! Impedit in recusandae
+            temporibus, tempora praesentium alias velit unde! Perspiciatis voluptates nam ad, ipsum assumenda, aliquid
+            eum nesciunt architecto quae non est hic, voluptate in aspernatur perferendis. Commodi repudiandae ipsa
+        </p>
+    </div>
+
+    <div class="contenedor-secundario">
+        <div id="subcontainer-contenedor-secundario">
+            Contenido 1
+        </div>
+        <div class="subcontainer-contenedor">
+            Contenido 2
+        </div>
+    </div>
+    <!-- https://developers.google.com/speed/libraries/#jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Selectores js
+        var JSquerySelectorByTagname = document.querySelectorAll('span');
+        var contenedorPrincipal = document.getElementsByClassName('contenedor-principal');
+        //selectores
+        var jQuerySelectorByTagname = $('span');
+        var contenedorPrincipalByJquery = $('.contenedor-principal');
+        var contenedorPrincipalByJqueryAndByElements = $('div');
+        var tituloSelectorJS = document.getElementById('titulo');
+        var tituloSelectorByJQuery = $('#titulo');
+
+        //Selectores anidados en jQuery
+        var selectorAnidado = $('div p.parrafo2');
+        var subcontainerContenedorSecundario = $('#subcontainer-contenedor-secundario');
+        var subcontainerContenedorSecundarioAnidando = $('.contenedor-secundario #subcontainer-contenedor-secundario');
+
+        console.log(subcontainerContenedorSecundarioAnidando);
+        // console.log(selectorAnidado);
+        // console.log(tituloSelectorByJQuery);
+        // console.log(tituloSelectorJS);
+        // console.log(contenedorPrincipal);
+        // console.log(jQuerySelectorByTagname);
+    </script>
+</body>
+
+</html>
